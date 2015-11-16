@@ -1,12 +1,12 @@
-<h2>Add a recipie</h2>
+<h2>Add a recipe</h2>
 
-<% if @recipie.errors.any? %>
-  <% @recipie.errors.full_messages.each do |msg| %>
+<% if @recipe.errors.any? %>
+  <% @recipe.errors.full_messages.each do |msg| %>
     <p><%= msg %></p>
   <% end %>
 <% end %>
 
-<%= form_for(@recipie) do |f| %>
+<%= form_for(@recipe) do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <br />
@@ -18,5 +18,5 @@
   <%= f.label :photo %>
   <%= f.file_field :photo %>
   
-  <%= f.submit "Create recipie" %>
+  <%= f.submit "Create recipe" %>
 <% end %>

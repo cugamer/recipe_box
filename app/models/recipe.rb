@@ -1,6 +1,7 @@
-class Recipie < ActiveRecord::Base
+class Recipe < ActiveRecord::Base
   validates :title, presence: true, length: { maximum: 80 }
   validates :description, presence: true, length: { maximum: 1000 }
+  belongs_to :user
   
   
   has_attached_file :photo, styles: { medium: "400x400>", thumb: "150x150>" },

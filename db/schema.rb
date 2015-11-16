@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20151116162329) do
 
-  create_table "recipies", force: :cascade do |t|
+  create_table "recipes", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
     t.string   "photo_file_name"
