@@ -18,6 +18,6 @@ class RecipiesController < ApplicationController
   
   private
     def recipie_params
-      params.require(:recipie).permit(:description, :title)
+      params.require(:recipie).permit(:description, :title, :photo)
     end
 end
