@@ -10,7 +10,7 @@ class RecipesController < ApplicationController
   end
   
   def create
-    @recipe = current_user.recipe.new(recipe_params)
+    @recipe = User.find(current_user).recipes.new(recipe_params)
     if @recipe.save
       redirect_to @recipe
     else
