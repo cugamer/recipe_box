@@ -1,6 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* miscellaneous */
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+
+
 /* universal */
 
 body {
@@ -119,4 +129,47 @@ h2.form-title{
   }
 }
 
+/* recipe page styles */
 
+.recipe-pic{
+  height: 25%;
+  width: 25%;
+  margin-right: 10%;
+  float: left;
+}
+
+div.recipe-info{
+  float:right;
+  width: 65%;
+}
+
+h2.recipe-title{
+  text-align: left;
+  color: #FF0000;
+  font-size: 2em;
+}
+
+div.rec-sub-sec{
+  float: left;
+  width: 47%;
+  border: 1px solid #000;
+  
+}
+.dir-sub-sec{
+  clear: left;
+  margin-right: 3%;
+}
+
+.ing-sub-sec{
+  margin-left: 3%;
+}
+
+/* debug information */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}

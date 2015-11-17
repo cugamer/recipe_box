@@ -1,23 +1,32 @@
-<h2><%= @recipe.title %><h2></h2>
-<br />
-<%= @recipe.description %>
-<br />
-<%= image_tag @recipe.photo.url(:medium) %>
+<div class="recipe-info">
+  <div>
+    <h2 class="recipe-title"><%= @recipe.title  %></h2>
+  </div>
+  <div class= "recipe-desc">
+    <%= simple_format @recipe.description %>
+  </div>
+</div>
+  
+<%= image_tag @recipe.photo.url(:medium), class: "recipe-pic" %>
 
-<h3>Directions</h3>
-<% if @recipe.directions.any? %>
-  <% @recipe.directions.all.each do |direction| %>
-    <ul>
-      <li><%= direction.direction %></li>
-    </ul>
+<div class="rec-sub-sec dir-sub-sec">
+  <h3>Directions</h3>
+  <% if @recipe.directions.any? %>
+    <% @recipe.directions.all.each do |direction| %>
+      <ul>
+        <li><%= direction.direction %></li>
+      </ul>
+    <% end %>
   <% end %>
-<% end %>
+</div>
 
-<h3>Ingredients</h3>
-<% if @recipe.ingredients.any? %>
-  <% @recipe.ingredients.all.each do |ingredient| %>
-    <ul>
-      <li><%= ingredient.ingredient %></li>
-    </ul>
+<div class="rec-sub-sec ing-sub-sec">
+  <h3>Ingredients</h3>
+  <% if @recipe.ingredients.any? %>
+    <% @recipe.ingredients.all.each do |ingredient| %>
+      <ul>
+        <li><%= ingredient.ingredient %></li>
+      </ul>
+    <% end %>
   <% end %>
-<% end %>
+</div>
