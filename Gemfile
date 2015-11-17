@@ -32,7 +32,7 @@ gem 'paperclip', '~> 4.3.1'
 # Cocoon helps with nested forms.  https://github.com/nathanvda/cocoon
 gem 'cocoon', '~> 1.2.6'
 
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap-sass', '3.2.0.0'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
