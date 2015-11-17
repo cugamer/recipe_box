@@ -87,10 +87,18 @@ h2.form-title{
     border-radius: 2px;
   }
   
+  textarea{
+    height: 80px;
+  }
+  
   .sub-form{
     width: 45%;
     float: left;
     margin: 2.5%;
+  }
+  
+  .sub-menu-button{
+    margin: 5px;
   }
   
   input[type="file"]{
@@ -111,6 +119,4 @@ h2.form-title{
   }
 }
 
-.sub-menu-button{
-  margin: 5px;
-}
+
