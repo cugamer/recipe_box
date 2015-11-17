@@ -20,6 +20,16 @@ class RecipesController < ApplicationController
     end
   end
   
+  def destroy
+    recipe = Recipe.find(params[:id])
+    title = recipe.title
+    if recipe.user_id == current_user.id
+      recipe.destroy
+    end
+    flash[:success] = "The recipe \"#{title}\" has been removed successfully."
+    redirect_to root_path
+  end
+  
   private
     def recipe_params
       params.require(:recipe).permit(:description, :title, :photo, 
