@@ -22,25 +22,29 @@
       <%= f.label :photo %>
       <%= f.file_field :photo %>
       
-      <h3>Directions</h3>
-      <div id="directions">
-        <%= f.fields_for :directions do |direction| %>
-          <%= render 'direction_fields', f: direction %>
-          <div id="links">
-            <%= link_to_add_association 'Add direction', f, :directions %>
-          </div>
-        <% end %>
+      <div class="sub-form">
+        <h3>Directions</h3>
+        <div id="directions">
+          <%= f.fields_for :directions do |direction| %>
+            <%= render 'direction_fields', f: direction %>
+            <div id="links">
+              <%= link_to_add_association 'Add direction', f, :directions, class: "btn btn-default sub-menu-button" %>
+            </div>
+          <% end %>
+        </div>
       </div>
       
-      <h3>Ingredients</h3>
-      <div id="ingredients">
-        <%= f.fields_for :ingredients do |ingredient| %>
-          <%= render 'ingredient_fields', f: ingredient %>
-          <div id="links">
-            <%= link_to_add_association 'Add ingredient', f, :ingredients %>
-          </div>
-          
-        <% end %>
+      <div class="sub-form">
+        <h3>Ingredients</h3>
+        <div id="ingredients">
+          <%= f.fields_for :ingredients do |ingredient| %>
+            <%= render 'ingredient_fields', f: ingredient %>
+            <div id="links">
+              <%= link_to_add_association 'Add ingredient', f, :ingredients, class: "btn btn-default sub-menu-button" %>
+            </div>
+            
+          <% end %>
+        </div>
       </div>
       
       <%= f.submit "Create recipe" %>
