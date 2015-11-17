@@ -12,3 +12,12 @@
     </ul>
   <% end %>
 <% end %>
+
+<h3>Ingredients</h3>
+<% if @recipe.ingredients.any? %>
+  <% @recipe.ingredients.all.each do |ingredient| %>
+    <ul>
+      <li><%= ingredient.ingredient %></li>
+    </ul>
+  <% end %>
+<% end %>
