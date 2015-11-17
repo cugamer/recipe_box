@@ -3,6 +3,7 @@ class Recipe < ActiveRecord::Base
   validates :description, presence: true, length: { maximum: 1000 }
   belongs_to :user
   has_many :directions
+  accepts_nested_attributes_for :directions, reject_if: :all_blank, allow_destroy: true
   has_many :ingredients
   
   
