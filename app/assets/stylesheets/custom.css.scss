@@ -67,3 +67,23 @@ p {
   }
 }
 
+/* formpage styles */
+
+h2.form-title{
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.wide-form{
+  width: 95%;
+  margin-left: 2.5%;
+  
+  label{
+    margin-left: 5px
+  }
+  
+  input, textarea{
+    width: 100%;
+    border-radius: 2px;
+  }
+}
