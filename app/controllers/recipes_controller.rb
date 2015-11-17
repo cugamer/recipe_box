@@ -8,6 +8,7 @@ class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
     @recipe.directions.build
+    @recipe.ingredients.build
   end
   
   def create
@@ -21,8 +22,9 @@ class RecipesController < ApplicationController
   
   private
     def recipe_params
-      params.require(:recipe).permit(:description, :title, :photo, directions_attributes:[
-                                      :id, :direction, :_destroy])
+      params.require(:recipe).permit(:description, :title, :photo, 
+                                      directions_attributes:[:id, :direction, :_destroy],
+                                      ingredients_attributes:[:id, :ingredient, :_destroy])
     end
     
     def require_login

@@ -28,5 +28,16 @@
     <% end %>
   </div>
   
+  <h3>Ingredients</h3>
+  <div id="ingredients">
+    <%= f.fields_for :ingredients do |ingredient| %>
+      <%= render 'ingredient_fields', f: ingredient %>
+      <div id="links">
+        <%= link_to_add_association 'Add ingredient', f, :ingredients %>
+      </div>
+      
+    <% end %>
+  </div>
+  
   <%= f.submit "Create recipe" %>
 <% end %>
