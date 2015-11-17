@@ -29,6 +29,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Use paperclip gem to handle file uploads
 gem 'paperclip', '~> 4.3.1'
 
+# Cocoon helps with nested forms.  https://github.com/nathanvda/cocoon
+gem 'cocoon', '~> 1.2.6'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
