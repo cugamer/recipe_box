@@ -1,13 +1,15 @@
 <h3>Welcome <%= @current_user.name %></h3>
 <div >
   <% @recipes.each do |recipe| %>
-    <div class="rec-wrapper">
-      <div class="rec-homepage-title">
-        <%= recipe.title %>
+    <%= link_to recipe_path(recipe.id) do %>
+      <div class="rec-wrapper">
+        <div class="rec-homepage-title">
+          <%= recipe.title %>
+        </div>
+        <div class="rec-homepage-photo">
+          <%= image_tag recipe.photo.url(:medium) %>
+        </div>
       </div>
-      <div class="rec-homepage-photo">
-        <%= image_tag recipe.photo.url(:medium) %>
-      </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
