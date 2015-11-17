@@ -4,15 +4,7 @@
 </div>
 
 <% if logged_in? %>
-  <h3>Welcome <%= @current_user.name %></h3>
-  <% @recipes.each do |recipe| %>
-    <div class="rec-title">
-      <%= recipe.title %>
-    </div>
-    <div>
-      <%= image_tag recipe.photo.url(:medium) %>
-    </div>
-  <% end %>
+  <%= render 'recipe_display' %>
 <% else %>
   <h2>New here? <%= link_to "Sign up", new_user_path %> or <%= link_to "sign in", login_path %>.</h2>
 <% end %>
