@@ -1,5 +1,14 @@
-<%= @recipe.title %>
+<h2><%= @recipe.title %><h2></h2>
 <br />
 <%= @recipe.description %>
 <br />
 <%= image_tag @recipe.photo.url(:medium) %>
+
+<h3>Directions</h3>
+<% if @recipe.directions.any? %>
+  <% @recipe.directions.all.each do |direction| %>
+    <ul>
+      <li><%= direction.direction %></li>
+    </ul>
+  <% end %>
+<% end %>
