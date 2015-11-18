@@ -61,7 +61,7 @@ class RecipesController < ApplicationController
     end
     
     def correct_user
-      @user = User.find(params[:id])
+      @user = @user = User.find(Recipe.find(params[:id]).user_id)
       redirect_to(root_url) unless @user == current_user
     end
 end

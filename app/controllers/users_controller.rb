@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :require_login, only: [:show, :edit, :update]
+  before_action :correct_user, only: [:show, :edit, :update]
+  
   def new
     @user = User.new
   end
@@ -36,5 +39,17 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                     :password_confirmation)
+    end
+    
+    def require_login
+      unless logged_in?
+        flash[:error] = "You must be logged in to access this action"
+        redirect_to login_url
+      end
+    end
+    
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless @user == current_user
     end
 end
