@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
   before_action :require_login
+  before_action :correct_user
   
   def show
     @recipe = Recipe.find(params[:id])
@@ -57,5 +58,10 @@ class RecipesController < ApplicationController
         flash[:error] = "You must be logged in to access this action"
         redirect_to login_url
       end
+    end
+    
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless @user == current_user
     end
 end
