@@ -31,7 +31,7 @@ class RecipesController < ApplicationController
       flash[:success] = "The recipe was updated successfully."
       redirect_to @recipe
     else
-      redirect_to 'edit'
+      render 'edit'
     end
   end
   
