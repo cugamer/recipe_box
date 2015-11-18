@@ -5,6 +5,7 @@ This is another exercise in rails.  It's a simple recipe box application.  Users
 can create and edit an account, log in and out, create and edit recipes (with a 
 picture) and delete recipes.  There is no function for following other users, or 
 viewing other user's submissions, that's outside the projects current scope.
+Built over a two day period from 11-16 to 11-17 2015.
 
 To get this up and running
 --------------------------
