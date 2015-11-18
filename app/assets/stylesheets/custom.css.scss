@@ -152,10 +152,6 @@ h2.form-title{
   }
 }
 
-.delete-button, .edit-button{
-  float: left;
-  margin: 8px;
-}
 
 .sign-in-up-link{
   clear: both;
@@ -182,11 +178,19 @@ h2.recipe-title{
   font-size: 2em;
 }
 
+.rec-show-pod{
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
 div.rec-sub-sec{
   float: left;
   width: 47%;
-  border: 1px solid #000;
-  
+  li{
+    list-style: none;
+  }
 }
 .dir-sub-sec{
   clear: left;
@@ -195,6 +199,15 @@ div.rec-sub-sec{
 
 .ing-sub-sec{
   margin-left: 3%;
+}
+
+.delete-button, .edit-button{
+  float: left;
+  margin: 8px;
+}
+
+.sub-category{
+  margin-left: 10px;
 }
 
 /* debug information */

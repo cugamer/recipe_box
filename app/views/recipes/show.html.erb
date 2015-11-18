@@ -1,4 +1,4 @@
-<div class="recipe-info">
+<div class="recipe-info rec-show-pod">
   <div>
     <h2 class="recipe-title"><%= @recipe.title  %></h2>
   </div>
@@ -9,8 +9,8 @@
   
 <%= image_tag @recipe.photo.url(:medium), class: "recipe-pic" %>
 
-<div class="rec-sub-sec dir-sub-sec">
-  <h3>Directions</h3>
+<div class="rec-sub-sec dir-sub-sec rec-show-pod">
+  <h3 class="sub-category">Directions</h3>
   <% if @recipe.directions.any? %>
     <% @recipe.directions.all.each do |direction| %>
       <ul>
@@ -20,8 +20,8 @@
   <% end %>
 </div>
 
-<div class="rec-sub-sec ing-sub-sec">
-  <h3>Ingredients</h3>
+<div class="rec-sub-sec ing-sub-sec rec-show-pod">
+  <h3 class="sub-category">Ingredients</h3>
   <% if @recipe.ingredients.any? %>
     <% @recipe.ingredients.all.each do |ingredient| %>
       <ul>
