@@ -6,7 +6,7 @@
           <%= recipe.title %>
         </div>
         <div class="rec-homepage-photo">
-          <%= image_tag recipe.photo.url(:medium) %>
+          <%= image_tag get_image_or_n_a(recipe) %>
         </div>
       </div>
     <% end %>
