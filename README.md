@@ -20,14 +20,13 @@ project there._
 2. Make sure you have Ruby installed.  If not, get it [here](https://www.ruby-lang.org/en/downloads/). 
 3. From the command line make sure you have bundler installed by entering "gem install bundler"
 4. Navigate to the root folder of the project.
-5. Run "bundle install" and rake db:migrate to set things up.  This will also seed
-the database.
+5. Run "bundle install" and rake db:migrate to set things up.  
 6. Install the ImageMagick program to work with Paperclip in handling photos.  The
 program can be found here: http://www.imagemagick.org/script/binary-releases.php.
 If you are on Cloud9 simply run "sudo apt-get install ImageMagick" from the command
 line.
-7. Rune "rails server" to get things running.  On Cloud9 run "rails s -b $IP -p $PORT"
-8. Open your browser and navigate to "http://localhost:3000"  There you should seed
+7. Run "rails server" to get things running.  On Cloud9 run "rails s -b $IP -p $PORT"
+8. Open your browser and navigate to "http://localhost:3000"  There you should see
 the page.  If you are running this on Cloud9 the URL will be different, the terminal
 will show you the correct URL
 9. When you're done, simply hit ctrl/cmd + c to quit the server.
