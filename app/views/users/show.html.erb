@@ -1,5 +1,5 @@
-<%= @user.name %>
-<br />
-<%= @user.email %>
-<br />
+<h1 class="user-name"><%= @user.name %></h1>
+
+<p>Current email address: <%= @user.email %></p>
+
 <%= link_to 'Edit your account', edit_user_path(@user.id) %>
