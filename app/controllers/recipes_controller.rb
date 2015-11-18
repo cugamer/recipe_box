@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :require_login
-  before_action :correct_user
+  before_action :correct_user, only: [:show, :create, :edit, :update, :destroy]
   
   def show
     @recipe = Recipe.find(params[:id])
