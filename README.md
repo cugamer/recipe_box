@@ -28,7 +28,7 @@ line.
 7. Run "rails server" to get things running.  On Cloud9 run "rails s -b $IP -p $PORT"
 8. Open your browser and navigate to "http://localhost:3000"  There you should see
 the page.  If you are running this on Cloud9 the URL will be different, the terminal
-will show you the correct URL
+will show you the correct URL.
 9. When you're done, simply hit ctrl/cmd + c to quit the server.
 
 Components used
