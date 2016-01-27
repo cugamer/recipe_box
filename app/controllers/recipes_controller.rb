@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :require_login
-  before_action :correct_user, only: [:show, :create, :edit, :update, :destroy]
+  before_action :correct_user, only: [:show, :edit, :update, :destroy]
   
   def show
     @recipe = Recipe.find(params[:id])
@@ -61,7 +61,7 @@ class RecipesController < ApplicationController
     end
     
     def correct_user
-      @user = @user = User.find(Recipe.find(params[:id]).user_id)
+      @user = User.find(Recipe.find(params[:id]).user_id)
       redirect_to(root_url) unless @user == current_user
     end
 end
