@@ -29,8 +29,8 @@ gem 'paperclip', '~> 4.3.1'
 # Cocoon helps with nested forms.  https://github.com/nathanvda/cocoon
 gem 'cocoon', '~> 1.2.6'
 
+# Basic styling
 gem 'bootstrap-sass', '3.2.0.0'
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,6 +48,10 @@ group :development do
 end
 
 group :production do
+  # Postress database support
   gem 'pg', '~> 0.18.4'
+  
+  # Support for file upload to Amazon Web Services
+  gem 'aws-sdk', '~> 2.2.14'
 end
 
