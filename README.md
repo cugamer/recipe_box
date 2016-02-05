@@ -8,7 +8,7 @@ viewing other user's submissions, that's outside the projects current scope.
 Built over a two day period from 11-16 to 11-17 2015.
 
 The application is currently deployed to Heroku and can be viewed at 
-https://http://simple-recipe-app.herokuapp.com/
+https://simple-recipe-app.herokuapp.com/
 
 To get this up and running
 --------------------------
