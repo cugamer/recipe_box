@@ -32,6 +32,9 @@ gem 'cocoon', '~> 1.2.6'
 # Basic styling
 gem 'bootstrap-sass', '3.2.0.0'
 
+# Support for file upload to Amazon Web Services
+gem 'aws-sdk', '~> 2.2.14'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -50,8 +53,5 @@ end
 group :production do
   # Postress database support
   gem 'pg', '~> 0.18.4'
-  
-  # Support for file upload to Amazon Web Services
-  gem 'aws-sdk', '~> 2.2.14'
 end
 
