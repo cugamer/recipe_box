@@ -7,6 +7,9 @@ picture) and delete recipes.  There is no function for following other users, or
 viewing other user's submissions, that's outside the projects current scope.
 Built over a two day period from 11-16 to 11-17 2015.
 
+The application is currently deployed to Heroku and can be viewed at 
+https://http://simple-recipe-app.herokuapp.com/
+
 To get this up and running
 --------------------------
 _Note: This project was built in the Ruby development environment at https://c9.io/.
