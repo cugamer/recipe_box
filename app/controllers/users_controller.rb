@@ -27,10 +27,13 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
+    if !check_for_protected(@user.email) && @user.update_attributes(user_params)
       flash[:success] = "Your profile has been updated"
       redirect_to @user
     else
+      if(check_for_protected(@user.email))
+        flash[:danger] = "This account cannot be edited"
+      end
       render 'edit'
     end
   end
